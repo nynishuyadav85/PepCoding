@@ -5,6 +5,12 @@ import java.util.Scanner;
 public class P12 {
 
 	public static void main(String[] args) {
+		try {
+            System.setIn(new FileInputStream("../input.txt"));
+            System.setOut(new PrintStream(new FileOutputStream("../output.txt")));
+        } catch (Exception e) {
+            System.err.println("Error");
+        }
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 
