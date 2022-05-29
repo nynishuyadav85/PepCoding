@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class demo {
+public class digitfrequency {
     public static void main(String[] args) {
         try {
             System.setIn(new FileInputStream("../input.txt"));
@@ -11,15 +11,18 @@ public class demo {
         }
 
         Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
+         int n = scn.nextInt();
         int dig = scn.nextInt();
-
-        // int nod = 0;
-
-        // for (int i = 1 ; i <= n ;  i++) {
-        //  int div =  i % 10 ; 
-        //  nod++;
-        // }
-        // System.out.println(nod);
+        
+        int nod = 0;
+        while (n != 0){
+        int	div = n % 10;
+         n =  n / 10 ; 
+         if(div == dig){
+         	nod++;
+         }
+         
+         }
+         System.out.println(nod);
     }
 }
