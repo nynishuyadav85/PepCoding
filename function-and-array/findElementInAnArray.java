@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class SpanOfArray
+public class findElementInAnArray
 {
     public static void main(String[] args)
     {
@@ -24,27 +24,18 @@ public class SpanOfArray
             arr[i] = scn.nextInt();
             // System.out.println(arr[i]);
         }
-        int max = arr[0];
-        int min = arr[0];
-        for (int i = 0 ; i < arr.length ; i++ )
+        int find = scn.nextInt();
+
+        for(int i = 0 ; i < arr.length ; i++)
         {
-            if(max < arr[i])
-            {
-                max = arr[i];
+            if(arr[i] == find){
+                System.out.println(i);
+                return;
             }
-            if(min > arr[i])
-            {
-                min = arr[i];
-            }
+            
+               
         }
-
-        int span = max - min ;
-        System.out.println(span);
-
-
-
-
-
-
+         System.out.println("-1");
+            
     }
 }
